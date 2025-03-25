@@ -10,8 +10,9 @@ import java.util.concurrent.TimeUnit
 class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == Intent.ACTION_BOOT_COMPLETED) {
+            // 15 soniyalik kechikish
             val workRequest = OneTimeWorkRequestBuilder<AudioPlayerWorker>()
-                .setInitialDelay(5, TimeUnit.SECONDS)
+                .setInitialDelay(30, TimeUnit.SECONDS)
                 .build()
             WorkManager.getInstance(context).enqueue(workRequest)
         }
