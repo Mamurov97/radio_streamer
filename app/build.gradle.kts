@@ -56,7 +56,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("com.google.android.exoplayer:exoplayer:2.18.1")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.work:work-runtime-ktx:2.8.0")
+    implementation("androidx.media3:media3-exoplayer:1.0.0-beta02")
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.okhttp)
+    implementation(libs.kotlinx.coroutines.android)
+
 }
